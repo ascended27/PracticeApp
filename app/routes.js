@@ -67,29 +67,69 @@ module.exports = function(app){
         })
     });
 
-    //Returns the games played by a user as a String array.
-    app.get('/api/games/:username',function(req, res){
-        User.findOne({"username":req.params.username}, function(err,user){
+    //Get all game records
+    app.get('/api/games/all',function(req,res){
+
+        User.aggregate([
+
+
+            {$match:{"games":{"$ne":null}}},
+            {$project:{"games":1, "_id":0}},
+            {$unwind:"$games"},
+            {$project:{game:"$games"}}
+
+        ],function(err, result){
 
             if(err)
                 res.send(err);
 
-            var gamesLength = user.games.length;
-            var gameArr = [];
-            var playersLength;
-            var players= "";
-            for(i = 0; i< gamesLength; i++){
-                playersLength = user.games[i].players.length;
-                for(j = 0; j < playersLength; j++)
-                    players += " " + user.games[i].players[j].username;
-                gameArr[i] = "Game #" + i + " Players" + players  + " Winner: " + user.games[i].winner + " Score: " + user.games[i].score;
-                players = "";
-            }
-
-            res.json(gameArr);
+            res.json(result);
 
         })
 
+    });
+
+    //Get a copy of all the games played.
+    app.get('/api/games/unique',function (req,res) {
+
+        User.aggregate([
+
+
+            {$match:{"games":{"$ne":null}}},
+            {$project:{"games":1, "_id":0}},
+            {$unwind:"$games"},
+            {$project:{game:"$games"}},
+            {$group:{_id:"games","games":{$addToSet:"$game"}}}
+
+        ],function(err,result){
+
+            if(err)
+                res.send(err);
+
+            res.json(result);
+
+        })
+
+    });
+
+    //Returns the games played by a user.
+    app.get('/api/games/:username',function(req, res){
+        User.aggregate([
+
+
+            {$match:{"username":{"$eq":req.params.username}}},
+            {$project:{"games":1, "_id":0}},
+            {$unwind:"$games"},
+            {$project:{game:"$games"}},
+            {$group:{_id:"games","games":{$addToSet:"$game"}}},
+            {$unwind:"$games"}
+
+        ],function(err,result){
+            if(err)
+                res.send(err);
+
+            res.json(result);
+        })
     });
 
     // route to handle creating goes here (app.post)
