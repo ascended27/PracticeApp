@@ -1,6 +1,6 @@
 // server.js
 
-// modules ============================================
+// models ============================================
 
 var express        = require('express');
 var app            = express();
