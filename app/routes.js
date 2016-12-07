@@ -20,6 +20,14 @@ module.exports = function(app){
         res.json({message: 'This is just a test'});
     });
 
+    app.get('/api/user/:username',function(req, res){
+       User.findOne({"username":req.params.username}, function(err, user){
+           if(err)
+               res.send(err);
+           res.json(user);
+       })
+    });
+
     //Returns all users as a json
     app.get('/api/users', function(req, res){
 
