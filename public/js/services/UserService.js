@@ -10,4 +10,12 @@ angular.module('UserService', []).service('userService', ['$http', function($htt
             send(err);
         });
     };
+
+
+
+    this.getOneUser = function(username) {
+        console.log("username: " + username);
+        return $http.get('/api/user/' + username);
+    };
+
 }]);
