@@ -2,12 +2,13 @@
 // grab the mongoose module
 var mongoose = require('mongoose');
 
+// define our Player Model
 var playerSchema = new mongoose.Schema({
     username: String,
     army: String
 });
 
-// define our game schema
+// define our Game Model
 var gameSchema = new mongoose.Schema({
     winner: String,
     score: String,
