@@ -7,10 +7,6 @@ angular.module('appRoutes', []).config(['$routeProvider', '$locationProvider', f
             templateUrl: '../views/user.html',
             controller: 'UserController'
         })
-        .when('/test',{
-            templateUrl:'../views/test.html',
-            controller: 'UserController'
-        })
         .otherwise({
             templateUrl: '../views/home.html',
             controller: 'MainController'
