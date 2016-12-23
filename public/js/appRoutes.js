@@ -15,6 +15,10 @@ angular.module('appRoutes', []).config(['$routeProvider', '$locationProvider', f
             templateUrl: '../views/register.html',
             controller: 'RegisterController'
         })
+        .when('/about',{
+            templateUrl: '../views/about.html',
+            controller: 'AboutController'
+        })
         .otherwise({
             templateUrl: '../views/home.html',
             controller: 'MainController'

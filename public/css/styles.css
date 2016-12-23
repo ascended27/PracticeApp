@@ -8,5 +8,11 @@ body {
 
 li:hover {
 	background-color: #32324e;
-	border-radius: 3px;
+	border-radius: 5px;
+}
+
+#textContainer {
+	background: rgba(255,255,255,0.7);
+	padding: 25px;
+	border-radius: 5px;
 }
