@@ -19,6 +19,18 @@ angular.module('appRoutes', []).config(['$routeProvider', '$locationProvider', f
             templateUrl: '../views/about.html',
             controller: 'AboutController'
         })
+        .when('/stats',{
+            templateUrl: '../views/stats.html',
+            controller: 'StatsController'
+        })
+        .when('/history',{
+            templateUrl: '../views/history.html',
+            controller: 'HistoryController'
+        })
+        .when('/locations',{
+            templateUrl: '../views/locations.html',
+            controller: 'LocationController'
+        })
         .otherwise({
             templateUrl: '../views/home.html',
             controller: 'MainController'
