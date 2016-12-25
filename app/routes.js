@@ -140,6 +140,14 @@ module.exports = function(app){
         })
     });
 
+    app.delete('/api/delete/:username',function(req,res){
+       User.remove({'username':req.params.username},function(err,doc){
+           if(err)
+               res.send(err);
+           res.send(doc)
+       });
+    });
+
     // route to handle creating goes here (app.post)
     // route to handle delete goes here (app.delete)
 
