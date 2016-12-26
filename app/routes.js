@@ -8,7 +8,8 @@ var path = require('path');
 
 // grab the User model we just created
 var User = require('./models/user');
-
+var mongoose = require('mongoose');
+var sha256 = require('../node_modules/js-sha256/src/sha256');
 module.exports = function(app){
 
     // server routes =============================================
@@ -140,16 +141,38 @@ module.exports = function(app){
         })
     });
 
-    app.delete('/api/delete/:username',function(req,res){
-       User.remove({'username':req.params.username},function(err,doc){
-           if(err)
-               res.send(err);
-           res.send(doc)
-       });
-    });
+    // routes to handle updates go here (app.put)
 
     // route to handle creating goes here (app.post)
+    app.post('/api/register',function(req,res){
+
+        var userSchema = mongoose.model('User', User.userSchema);
+
+        var newUser = new userSchema();
+
+        newUser.username = req.body.username;
+        newUser.firstName = req.body.firstName;
+        newUser.lastName = req.body.lastName;
+        newUser.password = sha256(req.body.password);
+
+        newUser.save(function(err,doc){
+            if(err)
+                res.send(err);
+            else
+                res.send(doc);
+        })
+
+
+    });
+
     // route to handle delete goes here (app.delete)
+    app.delete('/api/delete/:username',function(req,res){
+        User.remove({'username':req.params.username},function(err,doc){
+            if(err)
+                res.send(err);
+            res.send(doc)
+        });
+    });
 
     // frontend routes ===========================================
     // route to handle all angular requests
