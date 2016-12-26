@@ -20,6 +20,7 @@ var port = process.env.PORT || 8080;
 
 // connect to our mongoDB database
 // (uncomment after you enter in your own credentials in config/db.js)
+mongoose.Promise = global.Promise;
 mongoose.connect(db.url);
 
 // get all data/stuff of the body (POST) parameters
