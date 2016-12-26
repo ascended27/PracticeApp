@@ -19,12 +19,11 @@ var gameSchema = new mongoose.Schema({
 var userSchema = new mongoose.Schema({
     firstName: {type: String, default: ' '},
     lastName: {type: String, default: ' '},
-    userName: {type: String, required: true, unique: true},
+    username: {type: String, required: true, unique: true},
     password: {type: String, required: true},
     games:[gameSchema]
 
 });
-
 
 // define our User model
 // module.exports allows us to pass this to other files when it is called
