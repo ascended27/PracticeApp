@@ -1,7 +1,150 @@
 <!-- public/views/home.html -->
 
-<div class="jumbotron text-center" id="textContainer">
-    <h1>Home Page 4 Life</h1>
-
-    <p>{{ tagline }}</p>
-</div>
+<!-- MAIN CONTENT -->
+			<div class="main-content">
+				<div class="container-fluid">
+					<!-- OVERVIEW -->
+                    <div class="row">
+							<div class="col-md-6">
+							<!-- TODO LIST -->
+							<div class="panel">
+								<div class="panel-heading">
+									<h3 class="panel-title">Recent Games</h3>
+									<div class="right">
+										<button type="button" class="btn-toggle-collapse"><i class="lnr lnr-chevron-up"></i></button>
+										<button type="button" class="btn-remove"><i class="lnr lnr-cross"></i></button>
+									</div>
+								</div>
+								<div class="panel-body">
+									<ul class="list-unstyled todo-list">
+										<li>
+											<p>
+												<span class="title">Match 1</span>
+												<span class="short-description">Match #1 description</span>
+												<span class="date">Oct 9, 2016</span>
+											</p>
+											<div class="controls">
+												<a href="#"><i class="icon-software icon-software-pencil"></i></a> <a href="#"><i class="icon-arrows icon-arrows-circle-remove"></i></a>
+											</div>
+										</li>
+										<li>
+											<p>
+												<span class="title">Match 2</span>
+												<span class="short-description">Match #2 description</span>
+												<span class="date">Oct 23, 2016</span>
+											</p>
+											<div class="controls">
+												<a href="#"><i class="icon-software icon-software-pencil"></i></a> <a href="#"><i class="icon-arrows icon-arrows-circle-remove"></i></a>
+											</div>
+										</li>
+										<li>
+											<p>
+												<strong>Match 3</strong>
+												<span class="short-description">Match #3 description</span>
+												<span class="date">Oct 11, 2016</span>
+											</p>
+											<div class="controls">
+												<a href="#"><i class="icon-software icon-software-pencil"></i></a> <a href="#"><i class="icon-arrows icon-arrows-circle-remove"></i></a>
+											</div>
+										</li>
+									</ul>
+								</div>
+							<!-- END TODO LIST -->
+						</div>
+					   </div>
+                        <div class="col-md-6">
+							<!-- VISIT CHART -->
+							<div class="panel">
+								<div class="panel-heading">
+									<h3 class="panel-title">Rating</h3>
+									<div class="right">
+										<button type="button" class="btn-toggle-collapse"><i class="lnr lnr-chevron-up"></i></button>
+										<button type="button" class="btn-remove"><i class="lnr lnr-cross"></i></button>
+									</div>
+								</div>
+								<div class="panel-body">
+									<div id="ratings-chart" class="ct-chart"></div>
+								</div>
+							</div>
+							<!-- END VISIT CHART -->
+						</div>
+				</div>
+				
+                    
+					<!-- END OVERVIEW -->
+					<div class="row">
+						<div class="col-md-6">
+							<!-- VISIT CHART -->
+							<div class="panel">
+								<div class="panel-heading">
+									<h3 class="panel-title">Profile Visits</h3>
+									<div class="right">
+										<button type="button" class="btn-toggle-collapse"><i class="lnr lnr-chevron-up"></i></button>
+										<button type="button" class="btn-remove"><i class="lnr lnr-cross"></i></button>
+									</div>
+								</div>
+								<div class="panel-body">
+									<div id="visits-chart" class="ct-chart"></div>
+								</div>
+							</div>
+							<!-- END VISIT CHART -->
+						</div>
+							<div class="col-md-6">
+							<!-- TODO LIST -->
+							<div class="panel">
+								<div class="panel-heading">
+									<h3 class="panel-title">Army</h3>
+									<div class="right">
+										<button type="button" class="btn-toggle-collapse"><i class="lnr lnr-chevron-up"></i></button>
+										<button type="button" class="btn-remove"><i class="lnr lnr-cross"></i></button>
+									</div>
+								</div>
+								<div class="panel-body">
+									<ul class="list-unstyled todo-list">
+										<li>
+											<label class="control-inline fancy-checkbox">
+												<input type="checkbox"><span></span>
+											</label>
+											<p>
+												<span class="title">Restart Server</span>
+												<span class="short-description">Dynamically integrate client-centric technologies without cooperative resources.</span>
+												<span class="date">Oct 9, 2016</span>
+											</p>
+											<div class="controls">
+												<a href="#"><i class="icon-software icon-software-pencil"></i></a> <a href="#"><i class="icon-arrows icon-arrows-circle-remove"></i></a>
+											</div>
+										</li>
+										<li>
+											<label class="control-inline fancy-checkbox">
+												<input type="checkbox"><span></span>
+											</label>
+											<p>
+												<span class="title">Retest Upload Scenario</span>
+												<span class="short-description">Compellingly implement clicks-and-mortar relationships without highly efficient metrics.</span>
+												<span class="date">Oct 23, 2016</span>
+											</p>
+											<div class="controls">
+												<a href="#"><i class="icon-software icon-software-pencil"></i></a> <a href="#"><i class="icon-arrows icon-arrows-circle-remove"></i></a>
+											</div>
+										</li>
+										<li>
+											<label class="control-inline fancy-checkbox">
+												<input type="checkbox"><span></span>
+											</label>
+											<p>
+												<strong>Functional Spec Meeting</strong>
+												<span class="short-description">Monotonectally formulate client-focused core competencies after parallel web-readiness.</span>
+												<span class="date">Oct 11, 2016</span>
+											</p>
+											<div class="controls">
+												<a href="#"><i class="icon-software icon-software-pencil"></i></a> <a href="#"><i class="icon-arrows icon-arrows-circle-remove"></i></a>
+											</div>
+										</li>
+									</ul>
+								</div>
+							<!-- END TODO LIST -->
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- END MAIN CONTENT -->

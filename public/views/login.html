@@ -1,15 +1,73 @@
 <!-- public/views/login.html -->
-<div id="textContainer">
-<form ng-submit="submit(login)">
-    <div class="form-group">
-        <label for="username">Username</label>
-        <input type="text" class="form-control" id="username" placeholder="Username" ng-model="login.username">
+
+
+<div class="main-content">
+    <div class="container-fluid">
+        <!-- OVERVIEW -->
+        <div class="row">
+            <!--Login-->
+            <div class="col-md-6">
+				    <div class="panel">
+				        <div class="panel-heading">
+				            <h3 class="panel-title">Login to an existing account</h3>
+				        </div>
+				    <div class="panel-body">
+                
+                    <form ng-submit="submit(login)">
+                        <div class="form-group">
+                            <label for="username">Username</label>
+                            <input type="text" class="form-control" id="username" placeholder="Username" ng-model="login.username">
+                        </div>
+                        <div class="form-group">
+                            <label for="password">Password</label>
+                            <input type="password" class="form-control" id="password" placeholder="Password" ng-model="login.password">
+                        </div>
+                        <button type="submit" class="btn btn-primary">Login</button>
+<!--                        <button type="button" class="btn btn-info" ng-click="register()">Register</button>-->
+                    </form>
+                        
+                    </div>
+                </div>
+            </div>
+            <!--Register-->
+            <div class="col-md-6">
+				    <div class="panel">
+				        <div class="panel-heading">
+				            <h3 class="panel-title">Register for a new account</h3>
+				        </div>
+				    <div class="panel-body">
+                
+                    <form ng-submit="submit(registerForm)">
+                        <div class="form-group">
+                            <label for="username">Username</label>
+                            <input type="text" class="form-control" id="username" placeholder="Username" ng-model="registerForm.username" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="fname">First Name</label>
+                            <input type="text" class="form-control" id="fName" placeholder="First Name" ng-model="registerForm.fName" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="lName">Last Name</label>
+                            <input type="text" class="form-control" id="lName" placeholder="Last Name" ng-model="registerForm.lName" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="password">Password</label>
+                            <input type="password" class="form-control" id="password" placeholder="Password" ng-model="registerForm.password" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="confirmPassword">Confirm Password</label>
+                            <input type="password" class="form-control" id="confirmPassword" placeholder="Password" ng-model="registerForm.confirmPassword" required>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary">Register</button>
+                    </form>
+                        
+                    </div>
+                </div>
+            </div>
+
+        </div>
     </div>
-    <div class="form-group">
-        <label for="password">Password</label>
-        <input type="password" class="form-control" id="password" placeholder="Password" ng-model="login.password">
-    </div>
-    <button type="submit" class="btn btn-primary">Submit</button>
-    <button type="button" class="btn btn-info" ng-click="register()">Register</button>
-</form>
 </div>
+
+                                    

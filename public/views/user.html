@@ -1,9 +1,28 @@
 <!--public/views/user.html-->
 
-<div class="jumbotron text-center" id="textContainer">
-    <h1>Nerds and Proud</h1>
-    <p>{{ tagline }}</p>
-    <div>
-        <h3 ng-repeat="user in users">User: {{ user }}</h3>
+<div class="main-content">
+    <div class="container-fluid">
+        <!-- OVERVIEW -->
+        <div class="row">
+            <!--Users-->
+            <div class="col-md-12">
+				    <div class="panel">
+				        <div class="panel-heading">
+				            <h3 class="panel-title">List of Users</h3>
+				        </div>
+				    <div class="panel-body">
+                        
+                        <!-- User Content -->         
+                        <p>{{ tagline }}</p>
+                        <div>
+                            <h3 ng-repeat="user in users">User: {{ user }}</h3>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
+
+                                    

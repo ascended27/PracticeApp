@@ -34,7 +34,7 @@ th {
 }
 
 .brand {
-  background-color: #333D4A;
+  background-color: #2B333E;
   padding: 30px;
 }
 
@@ -46,9 +46,9 @@ th {
 
 footer {
   position: absolute;
-  bottom: -20px;
+  bottom: -13px;
   width: 100%;
-  padding-bottom: 20px;
+  padding-bottom: 26px;
 }
 
 .copyright {
@@ -395,7 +395,8 @@ html.fullscreen-bg #wrapper {
   padding: 0;
   margin: 0;
   border: none;
-  background-color: #d8d8d8
+  background-color: #2B333E;
+  height: 80px;
 }
 .navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus {
   background-color: #fafafa;
@@ -404,8 +405,10 @@ html.fullscreen-bg #wrapper {
   background-color: #f8f8f8;
 }
 
+/*Topbar back button color*/
 .navbar-btn {
   float: left;
+  color: #AEB7C2;
   padding: 16px 0;
 }
 
@@ -535,6 +538,11 @@ ul.notifications > li > .more:hover, ul.notifications > li > .more:focus {
 }
 .dropdown-menu > li i {
   margin-right: 6px;
+}
+
+/*Top bar Coloring for icons*/
+.navbar-default .navbar-nav > li > a {
+    color: #AEB7C2;
 }
 
 /********************
