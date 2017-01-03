@@ -1,6 +1,7 @@
-<!-- public/index.html -->
-<!doctype html>
+
+<!DOCTYPE html>
 <html lang="en">
+<!-- public/index.html -->
 <head>
     <meta charset="UTF-8">
     <base href="/">
@@ -19,7 +20,13 @@
     <script src="../libs/angular-route/angular-route.js"></script>
     <script src="../../node_modules/jquery/dist/jquery.min.js"></script>
     <script src="../../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-    <script src="http://maps.google.com/maps/api/js?sensor=false"></script>
+    <!--    Template JS-->
+	<script src="../js/jquery/jquery-2.1.0.js"></script>
+	<script src="../js/plugins/jquery-slimscroll/jquery.slimscroll.js"></script>
+	<script src="../js/plugins/jquery-easypiechart/jquery.easypiechart.min.js"></script>
+	<script src="../js/plugins/chartist/chartist.js"></script>
+	<script src="../js/klorofil.js"></script>
+    
     <!--GoogleMaps JS API Key-->
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBOnG_EYEQowcT-zBvr_BAciYrlwYEW-7A&callback=initMap"
 type="text/javascript"></script>  
@@ -52,15 +59,16 @@ type="text/javascript"></script>
 					<ul class="nav">
 						<li><a href="/"><i class="lnr lnr-home"></i> <span>Dashboard</span></a></li>
 						<li><a href="./login"><i class="lnr lnr-user"></i> <span>Login</span></a></li>
-						<li><a href="./user" class=""><i class="lnr lnr-users"></i> <span>Users</span></a></li>
+						<li><a href="./friends" class=""><i class="lnr lnr-users"></i> <span>Friends</span></a></li>
                         <li><a href="./stats" class=""><i class="lnr lnr-database"></i> <span>Statistics</span></a></li>
-						<li><a href="./history"><i class="lnr lnr-history"></i> <span>Game History</span></a></li>
+                        <li><a href="./army" class=""><i class="lnr lnr-list"></i> <span>Army</span></a></li>
+						<li><a href="./history"><i class="lnr lnr-history"></i> <span>Match History</span></a></li>
 						<li><a href="./locations"><i class="lnr lnr-location"></i> <span>Locations</span></a></li>
 						<li><a href="./about"><i class="lnr lnr-license"></i> <span>About Us</span></a></li>
 					</ul>
 				</nav>
 			</div>
-			<a class="footer" href="blank" title="share" target="_blank"><i class="fa fa-twitter"></i> <span>SHARE STATS</span></a>
+			<a class="footer" href="./share" title="share"><i class="fa fa-facebook"></i> <span>SHARE STATS</span></a>
 		</div>
 		<!-- END SIDEBAR -->
 		<!-- MAIN -->
@@ -130,27 +138,20 @@ type="text/javascript"></script>
 				</div>
 			</nav>
 			<!-- END NAVBAR -->
-			            
+			 
             <!-- ANGULAR DYNAMIC CONTENT -->
             <div ng-view></div>
             
-			<footer>
+<!--
+            <footer>
 				<div class="container-fluid">
 					<p class="copyright">&copy; 2016. Design inspired by <a href="https://themeineed.com">The Develovers</a> &amp; Created by MLy and MRodgers</p>
 				</div>
 			</footer>
-		</div>
-		<!-- END MAIN -->
+-->
+            <!-- END MAIN -->
+		</div>		
 	</div>
 	<!-- END WRAPPER -->
-    
-<!--    Template JS-->
-	<script src="../js/jquery/jquery-2.1.0.js"></script>
-	<script src="../js/plugins/jquery-slimscroll/jquery.slimscroll.js"></script>
-	<script src="../js/plugins/jquery-easypiechart/jquery.easypiechart.min.js"></script>
-	<script src="../js/plugins/chartist/chartist.js"></script>
-	<script src="../js/klorofil.js"></script>
-  
-
-</body>
+    </body>
 </html>

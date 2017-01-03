@@ -1,4 +1,4 @@
-// public/js/controllers/MainCtrl.js
+// public/js/controllers/UserCtrl.js
 angular.module('UserCtrl', ['UserService']).controller('UserController', ['userService', '$scope', function(userService, $scope) {
     console.log("In User Controller");
 

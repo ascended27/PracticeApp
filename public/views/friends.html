@@ -1,0 +1,59 @@
+<!--public/views/friends.html-->
+
+<div class="main-content" >
+    <div class="container-fluid">
+        <!-- OVERVIEW -->
+        <div class="row">
+            <!--Users-->
+            <div class="col-md-8">
+				    <div class="panel">
+				        <div class="panel-heading">
+				            <h3 class="panel-title">Friend's List</h3>
+				        </div>
+				    <div class="panel-body">                        
+                        
+                        <!--Friends-->
+                        <div class="col-md-12">
+                                
+            <!-- User Content -->         
+            <p>{{ tagline }}</p>
+            <div>
+                <h3 ng-repeat="user in users">User: {{ user }}</h3>
+            </div>
+                            <ul class="list-group">
+                                <li class="list-group-item">Friend<div class="right"><a href="/"><i class="lnr lnr-pencil"></i></a></div></li>
+                                <li class="list-group-item">Friend<div class="right"><a href="/"><i class="lnr lnr-pencil"></i></a></div></li>
+                                <li class="list-group-item">Friend<div class="right"><a href="/"><i class="lnr lnr-pencil"></i></a></div></li>
+                                <li class="list-group-item">Friend<div class="right"><a href="/"><i class="lnr lnr-pencil"></i></a></div></li>
+                                <li class="list-group-item">Friend<div class="right"><a href="/"><i class="lnr lnr-pencil"></i></a></div></li>    
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="col-md-4">
+				    <div class="panel">
+				        <div class="panel-heading">
+				            <h3 class="panel-title">Suggested Friends</h3>
+				        </div>
+				    <div class="panel-body">                        
+                        
+                        <!--Friends-->
+                        <div class="col-md-12">
+                            <ul class="list-group">
+                                <li class="list-group-item">Suggested Friend<div class="right"><a href="/"><i class="lnr lnr-plus-circle"></i></a></div></li>
+                                <li class="list-group-item">Suggested Friend<div class="right"><a href="/"><i class="lnr lnr-plus-circle"></i></a></div></li>
+                                <li class="list-group-item">Suggested Friend<div class="right"><a href="/"><i class="lnr lnr-plus-circle"></i></a></div></li>
+                                <li class="list-group-item">Suggested Friend<div class="right"><a href="/"><i class="lnr lnr-plus-circle"></i></a></div></li>
+                                <li class="list-group-item">Suggested Friend<div class="right"><a href="/"><i class="lnr lnr-plus-circle"></i></a></div></li>    
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+                                    

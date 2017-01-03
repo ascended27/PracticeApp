@@ -3,8 +3,8 @@ angular.module('appRoutes', []).config(['$routeProvider', '$locationProvider', f
 
     $routeProvider
     // nerds page that will use the NerdController
-        .when('/user', {
-            templateUrl: '../views/user.html',
+        .when('/friends', {
+            templateUrl: '../views/friends.html',
             controller: 'UserController'
         })
         .when('/login', {
