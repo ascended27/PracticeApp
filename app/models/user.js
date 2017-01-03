@@ -21,7 +21,8 @@ var userSchema = new mongoose.Schema({
     lastName: {type: String, default: ' '},
     username: {type: String, required: true, unique: true},
     password: {type: String, required: true},
-    games:[gameSchema]
+    games:[gameSchema],
+    friends:[{type: String}]
 
 });
 
