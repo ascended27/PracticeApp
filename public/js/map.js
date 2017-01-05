@@ -14,6 +14,8 @@
         
         var map = new google.maps.Map(document.getElementById("map"), options);
         marker.setMap(map);
+        
+        
     }
 
     google.maps.event.addDomListener(window, 'load', initialize_Map);
