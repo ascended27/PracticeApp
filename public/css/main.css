@@ -16,6 +16,11 @@
  * GENERAL STYLES
  ********************/
 body {
+  background: url('../img/bgimage.jpg') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
   font-family: "Source Sans Pro", sans-serif;
   font-size: 15px;
   color: #676a6d;
@@ -343,7 +348,7 @@ button.toast-close-button {
   left: 0;
   position: relative;
   float: right;
-  background-color: #f5f5fa;
+  background-color: transparent;
   
 }
 
@@ -361,11 +366,6 @@ button.toast-close-button {
 }
 
 .main-content {
-    background: url('../img/bgimage.jpg') no-repeat center center fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
     padding: 28px 10px;
 }
 
@@ -3044,4 +3044,13 @@ ul.activity-timeline > li:last-child:after {
   position: absolute;
   top: 0;
   left: 0;
+}
+
+/*
+CUSTOM
+*/
+
+a.empty {
+    color: #676a6d;
+    text-decoration: none;
 }

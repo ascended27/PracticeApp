@@ -31,6 +31,14 @@ angular.module('appRoutes', []).config(['$routeProvider', '$locationProvider', f
             templateUrl: '../views/locations.html',
             controller: 'LocationController'
         })
+        .when('/army',{
+            templateUrl: '../views/army.html',
+            controller: 'ArmyController'
+        })
+        .when('/profile',{
+            templateUrl: '../views/profile.html',
+            controller: 'ProfileController'
+        })
         .otherwise({
             templateUrl: '../views/home.html',
             controller: 'MainController'
