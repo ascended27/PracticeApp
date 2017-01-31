@@ -236,6 +236,21 @@ module.exports = function (app) {
 
     });
 
+    app.post('/api/login',function(req,res){
+        var phash = sha256(req.body.password);
+        var username = req.body.username;
+
+        User.findOne({"username": username}, function (err, user) {
+            if (err)
+                res.send(err);
+            if(user && user.password === phash)
+                res.send("success");
+            else
+                res.send("failed");
+        })
+
+    });
+
 // route to handle delete goes here (app.delete)
     app.delete('/api/delete/:username', function (req, res) {
         User.remove({'username': req.params.username}, function (err, doc) {
